@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Income and Expense Tracker</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js" integrity="sha512-aF9aX0J0+frs9Ps0W/NHmjBlSOFniw3mPQ/V7V5Z3Sqcx0NQ0PBfrt/zU0Z4BKetYn+5KnJf9NbwDXIwUNqEDA==" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Income Form -->
+    <form name="sample">
+        <label for=""> CATEGORIES
+            <select name="catogary" id="">
+                <option value="salary">Salary</option>
+                <option value="rent">Rent</option>
+                <option value="wages">Wages</option>
+                <option value="commission">Commission</option>
+                <option value="other">Other</option>
+            </select>
+        </label> <br> <br>
+        <label for="">
+            <input type="number" name="incomes">
+        </label>
+        <input type="button" name="add" value="Add Income" onclick="addincome();">
+    </form>
+
+    <table id="incomeTable" style="height: 300px; width: 400px; border: 2px solid black;">
+        <tr>
+            <th>Category</th>
+            <th>Income</th>
+        </tr>
+    </table>
+
+    <h4 id="incomeTotal" style="font-size: 20px;"></h4>
+
+    <!-- Expense Form -->
+    <form name="sample1">
+        <label for=""> CATEGORIES
+            <select name="catogary1" id="">
+                <option value="salary">Salary</option>
+                <option value="rent">Rent</option>
+                <option value="wages">Wages</option>
+                <option value="commission">Commission</option>
+                <option value="other">Other</option>
+            </select>
+        </label> <br> <br>
+        <label for="">
+            <input type="number" id="a"  name="expense">
+        </label>
+        <input type="button" name="add1" value="Add Expense" onclick="addexpense();">
+    </form>
+
+    <table id="expenseTable" style="height: 300px; width: 400px; border: 2px solid black;">
+        <tr>
+            <th>Category</th>
+            <th>Expense</th>
+        </tr>
+    </table>
+
+    <h4 id="expenseTotal" style="font-size: 20px;"></h4>
+
+    <!-- Pie Chart -->
+
+
+    <div class="container" style="width: 500px; height: 400px; float: right;">
+        <div>
+            <canvas id="pieChart"></canvas>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="test6.js">
+        
+    </script>
+</body>
+</html>
+
+</body>
+</html>

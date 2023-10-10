@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.3.3/chart.min.js" integrity="sha512-fMPPLjF/Xr7Ga0679WgtqoSyfUoQgdt8IIxJymStR5zV3Fyb6B3u/8DcaZ6R6sXexk5Z64bCgo2TYyn760EdcQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+ 
+
+
+    <div class="conainer"   style="width: 500px; height: 400px;  float: right;">
+        <div>
+            <canvas id="pie-chart"> </canvas>
+        </div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- <canvas id="pie-chart" width="100px" height="400px" >  </canvas> -->
+
+
+    
+    <script>
+        const z = document.getElementById("pie-chart");
+    
+        // z.style.height="200px";
+        // z.style.width="400px";
+
+        new Chart(z, {
+            type: 'pie',
+            data: {
+                labels: ["HTML", "CSS", "JavaScript"],
+                datasets: [{
+                    backgroundColor: ["#e63927", "#25692d", "#956325"],
+                    data: [418, 265, 586],
+                }]
+            },
+            options: {
+                title: {
+                    display: true,
+                    text: 'Pie Chart for Action Panel'
+                },
+                responsive: true,
+            }
+        });
+    </script>
+    
+
+    <script src="test2.js"></script>
+
+</body>
+
+</html>

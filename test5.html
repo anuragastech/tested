@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.3.3/chart.min.js" integrity="sha512-fMPPLjF/Xr7Ga0679WgtqoSyfUoQgdt8IIxJymStR5zV3Fyb6B3u/8DcaZ6R6sXexk5Z64bCgo2TYyn760EdcQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</head>
+
+<body>
+
+
+
+
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+
+
+        <!-- table 1 **** -->
+
+
+
+        <form action="" method="post" name="sample">
+            <label for=""> CATEGORIES
+                <select name="catogary" id="">
+                    <option value="salary">Salary</option>
+                    <option value="rent">Rent</option>
+                    <option value="wages">Wages</option>
+                    <option value="commission">Commission</option>
+                    <option value="other">Other</option>
+                </select>
+            </label> <br> <br>
+            <label for="">
+                <input type="number" name="incomes">
+            </label>
+            <input type="button" name="add" value="Add data" onclick="addincome();">
+        </form>
+
+        <table id="dataTable" style="height: 300px; width: 400px; border: 2px solid black;">
+            <tr>
+                <th>Category</th>
+                <th>Income</th>
+            </tr>
+        </table>
+        
+
+        <h4 id="text1" style="font-size: 20px;">
+
+        </h4>
+
+
+        <!-- table2****** -->
+
+
+        <form action="" method="post" name="sample1">
+            <label for=""> CATEGORIES
+                <select name="catogary1" id="">
+                    <option value="salary">Salary</option>
+                    <option value="rent">Rent</option>
+                    <option value="wages">Wages</option>
+                    <option value="commission">Commission</option>
+                    <option value="other">Other</option>
+                </select>
+            </label> <br> <br>
+            <label for="">
+                <input type="number" id="a"  name="expense">
+            </label>
+            <input type="button" name="add1" value="Add data" onclick="addexpense();">
+        </form>
+
+        <table id="dataTable1" style="height: 300px; width: 400px; border: 2px solid black;">
+            <tr>
+                <th>Category</th>
+                <th>Expense</th>
+            </tr>
+        </table>
+
+        <!-- ******** -->
+
+
+
+
+
+        <div class="conainer"   style="width: 500px; height: 400px;  float: right;">
+            <div>
+                <canvas id="pie-chart"> </canvas>
+            </div>
+        </div>
+
+
+
+
+        <!-- <script>
+        function addincome() {
+            var cat = document.sample.catogary.value;
+            var income = document.sample.incomes.value;
+            
+            var table = document.getElementById("dataTable");
+            var newRow = table.insertRow(table.rows.length);
+            
+            var categoryCell = newRow.insertCell(0);
+            categoryCell.innerHTML = cat;
+            
+            var incomeCell = newRow.insertCell(1);
+            incomeCell.innerHTML = income;
+        }
+    </script> -->
+
+    <script>
+
+var ca = [];
+// Declare an empty array to store incomes
+
+function addincome() {
+    var cat = document.sample.catogary.value;
+    var income = document.sample.incomes.value;
+
+    var table = document.getElementById("dataTable");
+    var newRow = table.insertRow(table.rows.length);
+
+    var categoryCell = newRow.insertCell(0);
+    categoryCell.innerHTML = cat;
+
+    var incomeCell = newRow.insertCell(1);
+    incomeCell.innerHTML = income;
+
+    // Calculate the sum of incomes
+
+
+    // Store the value in the array
+    ca.push(income);
+
+    var sum0 = 0;
+    for (var i = 0; i < ca.length; i++) {
+        sum0 += parseFloat(ca[i]);
+    }
+
+    // Display the sum of incomes
+    var sumCell = newRow.insertCell(2);
+    // sumCell.innerHTML = "Sum is " + sum0;
+
+    document.sample.catogary.value = "";
+    document.sample.incomes.value = "";
+    // up(sum0);
+    // totel(sum0)
+
+    var sumofincome = newRow.reduce(function (total, current) {
+        return total + current;
+    })
+
+
+    document.getElementById('text1').innerHTML = 'Total Income is: ' + sumofincome + '/-';
+}
+
+    </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+
+        <script src="test5.js"></script>
+
+    </body>
+
+    </html>
+
+</body>
+
+</html>
